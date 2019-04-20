@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { hot } from 'react-hot-loader'
+
+// Load stylesheet in app
+import css from '../styles/style.css'
 
 class App extends Component {
   constructor(props) {
@@ -17,3 +19,5 @@ class App extends Component {
 }
 
 ReactDOM.render(<App/>, document.querySelector('#root'));
+
+module.hot.accept()
