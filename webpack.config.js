@@ -1,22 +1,22 @@
 const webpack = require('webpack')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(j|t)s(x)?$/,
         exclude: /node_modules/,
         use: ['babel-loader']
       },
       {
-        test: /\.css$/,
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       }
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx', '.tsx', '.ts']
   },
   output: {
     path: __dirname + '/dist',
